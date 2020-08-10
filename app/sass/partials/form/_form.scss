@@ -1,0 +1,4 @@
+.form {
+  width: 100%;
+  @include container($w: 100%, $maxw: 500px, $mx: auto);
+}

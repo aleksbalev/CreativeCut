@@ -1,0 +1,43 @@
+.content_tab {
+
+  &__trigger {
+    padding-right: 4rem;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    max-width: 100%;
+    font-size: 2.8rem;
+
+    &::before {
+      @include arrow($right: 0);
+      transform-origin: 75% 75%;
+      top: 0;
+    }
+
+    &.open {
+      
+      &::before {
+        transform: rotate(-135deg);
+      }
+    }
+  }
+  
+  &__content {
+    overflow: hidden;
+    transition: all ease-in-out 350ms;
+  }
+}
+
+// Extra small devices (portrait phones, < than 576px)
+@include media-breakpoint-down(xs) {
+  .content_tab {
+
+    &__trigger {
+      display: block;
+
+      &::before {
+        top: 0;
+      }
+    }
+  }
+}

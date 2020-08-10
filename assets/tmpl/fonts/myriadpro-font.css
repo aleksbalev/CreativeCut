@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'Myriad Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Myriad Pro'),
+       local('MyriadPro-LightCond'),
+       url('MyriadPro/MyriadPro-LightCond.woff2') format('woff2'),
+       url('MyriadPro/MyriadPro-LightCond.woff') format('woff'),
+       url('MyriadPro/MyriadPro-LightCond.ttf') format('ttf'),
+       url('MyriadPro/MyriadPro-LightCond.eot') format('eot');
+}

@@ -1,0 +1,26 @@
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 999;
+  padding: 0;
+  opacity: 1;
+  background: $white;
+  transform: translateY(0);
+  transition: all 300ms ease-in-out;
+}
+
+.header--scroll-hidde {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+.header--scroll-show {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+
+@import 'components/header_top';
+@import 'components/header_nav';
+@import 'components/navigate';

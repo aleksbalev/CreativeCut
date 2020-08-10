@@ -1,0 +1,20 @@
+@mixin image ($w:'none', $h:'none', $maxw:'none', $maxh:'none', $minw:'none', $minh:'none') {
+  @if $w != 'none' {
+    width: $w;
+  }
+  @if $h != 'none' {
+    height: $h;
+  }
+  @if $maxw != 'none'{
+    max-width: $maxw;
+  }
+  @if $maxh != 'none' {
+    max-height: $maxh;
+  }
+  @if $minw != 'none' {
+    min-width: $minw;
+  }
+  @if $minh != 'none' {
+    min-height: $minh;
+  }
+}

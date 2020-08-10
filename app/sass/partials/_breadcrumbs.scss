@@ -1,0 +1,48 @@
+.breadcrumbs{
+	padding-left: 0;
+	margin: 1.5rem 0;
+	li{
+		list-style-type: none;
+		display: inline-block;
+		padding-right: 1rem;
+		margin-right: 1rem;
+		position: relative;
+		font-size: 1.6rem;
+		&::after{
+			content: '';
+			background-image: url('data:image/svg+xml;utf8,<svg  viewBox="0 0 256 256" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill="#9a94a8" d="M76.8,217.6c0-1.637,0.625-3.274,1.875-4.524L163.75,128L78.675,42.925c-2.5-2.5-2.5-6.55,0-9.05s6.55-2.5,9.05,0  l89.601,89.6c2.5,2.5,2.5,6.551,0,9.051l-89.601,89.6c-2.5,2.5-6.55,2.5-9.05,0C77.425,220.875,76.8,219.237,76.8,217.6z"/></svg>');
+			position: absolute;
+			background-repeat: no-repeat;
+			display: inline-block;
+			width: 1em;
+			height: 1.2em;
+			bottom: 0.15em;
+			right: -0.65em;
+		}
+		a{
+			padding: 0.25em 0;
+			line-height: 1.2em;
+			font-weight: 300;
+			color: $cO-1;
+			transition: color 200ms ease;
+			&:hover, &:focus{
+				color: $cC-1;
+				text-decoration: none;
+			}
+		}
+		&:last-child{
+			margin-right: 0;
+			padding-right: 0;
+			&::after{
+				content: '';
+				background-image: none;
+			}
+			a{
+				color: $cL-1;
+				&:hover, &:focus{
+					color: $cL-1;
+				}
+			}
+		}
+	}
+}

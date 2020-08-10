@@ -1,0 +1,14 @@
+.image {
+  @include image($maxw: 80px, $maxh: 80px);
+
+  &__wrap {
+    display: inline-block;
+    width: 100%;
+  }
+}
+.image_small {
+  @include image($maxw: 40px, $maxh: 40px);
+}
+.image_big {
+  @include image($maxw: 120px, $maxh: 120px);
+}

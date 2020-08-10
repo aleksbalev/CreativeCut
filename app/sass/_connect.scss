@@ -1,0 +1,7 @@
+@import '_mixins/mixins';
+@import 'vars';
+@import 'vendor/all';
+@import 'modules/all';
+@import 'partials/all';
+
+@import 'media'; // Всегда в конце

@@ -1,0 +1,7 @@
+// Extra small devices (portrait phones, < than 576px)
+@include media-breakpoint-down(xs) {
+  .copywrite {
+    text-align: center;
+    padding-bottom: 2rem;
+  }
+}

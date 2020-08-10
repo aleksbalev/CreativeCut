@@ -1,0 +1,18 @@
+@mixin container($w:94%,$maxw:1600px,$mx:auto,$my:0){
+  width: $w;
+  max-width: $maxw;
+  @include margin ($x:$mx, $y:$my);
+
+  @media (max-width: 768px) {
+    width: calc(100% - 30px);
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+.container {
+  @include container();
+
+  &--short {
+    @include container($w: 75%, $maxw:800px);
+  }
+}

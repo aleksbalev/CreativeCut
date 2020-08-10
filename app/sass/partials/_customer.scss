@@ -1,0 +1,27 @@
+.customer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+
+  &__image_hover {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 100ms ease-out;
+  }
+
+  &:hover, &:focus {
+    .customer__image_hover {
+      opacity: 1;
+    }
+  }
+}

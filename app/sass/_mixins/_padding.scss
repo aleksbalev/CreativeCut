@@ -1,0 +1,25 @@
+@mixin padding ($p:'none', $y:'none', $x:'none', $t:'none', $b:'none', $l:'none', $r:'none') {
+  @if $p != 'none' {
+    padding: $p;
+  }
+  @if $y != 'none' {
+    padding-top: $y;
+    padding-bottom: $y;
+  }
+  @if $x != 'none'{
+    padding-left: $x;
+    padding-right: $x;
+  }
+  @if $t != 'none' {
+    padding: $t;
+  }
+  @if $r != 'none' {
+    padding: $r;
+  }
+  @if $b != 'none' {
+    padding: $b;
+  }
+  @if $l != 'none' {
+    padding: $l;
+  }
+}

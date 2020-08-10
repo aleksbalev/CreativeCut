@@ -1,0 +1,1 @@
+Use local_config.php for local develop

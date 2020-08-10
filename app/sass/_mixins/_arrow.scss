@@ -1,0 +1,15 @@
+@mixin arrow($rotate: 45deg, $margin: 1rem, $color: $black, $right: auto) {
+  content: '';
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  right: $right;
+  margin: $margin;
+  transform-origin: center;
+  transform: rotate($rotate);
+  border: 2px solid;
+  background-color: transparent;
+  border-color: transparent $color $color transparent;
+  transition: transform 200ms ease-out;
+}

@@ -1,0 +1,41 @@
+$go_top_button_size: 2rem;
+
+.go_top_button {
+  width: $go_top_button_size;
+  height: $go_top_button_size;
+  border-radius: 50%;
+  position: relative;
+  padding: 8px 5px 2px 5px;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 300ms ease-out;
+  &::after {
+    @include arrow($rotate: 225deg, $color: $gray, $margin: 0);
+  }
+
+  &--fixed {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $light;
+    border: 1px solid $gray;
+
+    &.go_top_button {
+      &--show {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    
+      &--hide {
+        opacity: 0;
+        transform: translateX(200%);
+      }
+    }
+  }
+ 
+}

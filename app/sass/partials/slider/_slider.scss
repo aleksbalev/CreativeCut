@@ -1,0 +1,164 @@
+.slider {
+  position: relative;
+  
+  &__inner {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 300ms ease-in-out;
+    color: $black;
+  }
+
+  &__slide {
+    background-color: $white;
+    background-size: cover;
+    background-position: center;
+    color: inherit;
+    position: relative;
+    height: calc(100vh - 90px);
+    min-height: 60rem;
+  }
+  
+  figcaption {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 6rem 0;
+    display: flex;
+    flex-direction: column;
+    color: inherit;
+
+    &.center {
+      align-items: center;
+      justify-content: center;
+    }
+
+    &.center_top {
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    &.center_bottom {
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    &.left {
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    &.left_top {
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+
+    &.left_bottom {
+      align-items: flex-start;
+      justify-content: flex-end;
+    }
+
+    &.right {
+      align-items: flex-end;
+      justify-content: center;
+    }
+
+    &.right_top {
+      align-items: flex-end;
+      justify-content: flex-start;
+    }
+
+    &.right_bottom {
+      align-items: flex-end;
+      justify-content: flex-end;
+    }
+  }
+
+  .tns-nav {
+    position: absolute;
+    bottom: 4rem;
+    right: 3rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    button {
+      border: 1px solid $black;
+      display: block;
+      height: 8px;
+      border-radius: 50%;
+      width: 8px;
+      outline: none;
+      line-height: 0;
+      font-size: 0;
+      background-color: transparent;
+      padding: 5px;
+      margin-left: 5px;
+      cursor: pointer;
+      transition: all 200ms ease-in-out;
+
+      &:hover,
+      &:focus,
+      &.tns-nav-active {
+        outline: none;
+        background-color: $black;
+      }
+      
+      &:focus:not(.tns-nav-active) {
+        outline: none;
+        background-color: inherit;
+      }
+    }
+  }
+
+  &__slide--invert {
+    background-color: $gray;
+  }
+
+  .invert, &__slide--invert {
+    color: $white;
+  }
+  .invert.tns-nav {
+    button {
+      border: 1px solid $white;
+      
+      &:hover,
+      &.tns-nav-active {
+        background-color: $white;
+      }
+    }
+  }
+}
+
+
+// Small devices (landscape phones, < than 768px)
+@include media-breakpoint-down(sm) {
+  .slider {
+
+    &__slide {
+      min-height: 40rem;
+    }
+
+    &,
+    figure {
+      min-height: 40rem;
+    }
+
+  }
+}
+
+// Extra small devices (portrait phones, < than 576px)
+@include media-breakpoint-down(xs) {
+  .slider {
+    figcaption{
+      h1 {
+        font-size: 2.4em;
+      }
+    }
+  }
+}
+
+@import 'page_image';

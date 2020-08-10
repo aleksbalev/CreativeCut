@@ -1,0 +1,53 @@
+.header_nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  &__logo {
+    height: 7rem;
+    font-size: 1.3em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    justify-self: flex-start;
+    transition: all 200ms ease;
+    color: $black;
+    text-decoration: none;
+
+    img {
+      width: 130px;
+      margin-right: 2rem;
+
+      & + span {
+        font-weight: normal;
+
+        &::before {
+          content: '|';
+          margin-right: 2rem;
+        }
+      }
+    }
+    
+    span {
+      position: relative;
+      font-weight: 700;
+    }
+    
+    &:hover, &:focus {
+      color: $black;
+      text-decoration: none;
+    }
+  }
+  &__navigate {
+    text-align: right;
+  }
+}
+
+// Large devices (desktops, < than 768px)
+@include media-breakpoint-down(sm) {
+  .header_nav {
+    z-index: 2000;
+    padding: 1rem 0;
+  }
+}

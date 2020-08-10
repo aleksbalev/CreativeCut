@@ -1,0 +1,17 @@
+.price {
+  position: relative;
+  
+  &__inner {
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 3px 30px rgba($black, 0.15);
+    background-color: $white;
+    z-index: 1;
+  }
+}
+
+
+@import './price_table';
+@import './price_background';
+@import './price_header';
+@import './price_description';

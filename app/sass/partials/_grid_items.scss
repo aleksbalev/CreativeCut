@@ -1,0 +1,47 @@
+.grid_items{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	
+	& > * {
+		margin-bottom: 2rem;
+	}
+}
+
+
+@supports (display: grid) {
+	.grid_items {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+		gap: 3rem;
+		
+		&--big {
+			grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr));
+		}
+		
+		&--puzzles {
+			grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+		}
+
+		& > * {
+			margin-bottom: 0;
+		}
+	}
+}
+
+// Large devices (desktops, < than 1200px)
+@include media-breakpoint-down(lg) {
+	@supports (display: grid) {
+		.grid_items {
+			grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+
+			&--big {
+				grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+			}
+
+			&--puzzles {
+				grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+			}
+		}
+	}
+}

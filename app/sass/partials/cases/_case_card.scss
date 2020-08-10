@@ -1,0 +1,50 @@
+.case_card {
+  width: 100%;
+  position: relative;
+  background-color: $white;
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+
+  &__image {
+    position: relative;
+  }
+  
+  &__description {
+    padding: 2rem;
+    background-color: rgba($white, 0.9);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    line-height: 1.4;
+    opacity: 0;
+    transition: opacity 200ms ease-out;
+    
+    &:hover, &:focus {
+      opacity: 1;
+      text-decoration: none;
+    }
+  }
+
+  h4 {
+    font-weight: 400;
+  }
+}
+
+// Extra small devices (portrait phones, < than 576px)
+@include media-breakpoint-down(xs) {
+  .case_card {
+    &__description {
+      &:hover, &:focus {
+        opacity: 0;
+      }
+    }
+  }
+}

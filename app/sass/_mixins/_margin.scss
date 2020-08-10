@@ -1,0 +1,25 @@
+@mixin margin ($m:'none', $y:'none', $x:'none', $t:'none', $b:'none', $l:'none', $r:'none') {
+  @if $m != 'none' {
+    margin: $m;
+  }
+  @if $y != 'none' {
+    margin-top: $y;
+    margin-bottom: $y;
+  }
+  @if $x != 'none'{
+    margin-left: $x;
+    margin-right: $x;
+  }
+  @if $t != 'none' {
+    margin-top: $t;
+  }
+  @if $r != 'none' {
+    margin-right: $r;
+  }
+  @if $b != 'none' {
+    margin-bottom: $b;
+  }
+  @if $l != 'none' {
+    margin-left: $l;
+  }
+}

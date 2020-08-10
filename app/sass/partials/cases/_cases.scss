@@ -1,0 +1,140 @@
+#cases_view {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  left: 0;
+  top: -200px;
+}
+
+.cases{
+  position: relative;
+
+  &__title {
+    display: block;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 0;
+
+    &::after {
+      content: '';
+      position: relative;
+      display: block;
+      height: 5px;
+      width: 50px;
+      background-color: $black;
+      margin-right: 4rem;
+      font-size: initial;
+      margin-top: 2rem;
+    }
+  }
+
+  &__list {
+    .tns-inner {
+      margin-right: -30px !important;
+    }
+  }
+  
+  &__list_items {
+    margin-top: 3rem;
+    margin-bottom: 6rem;
+  }
+  
+  &__slider {
+    transition: opacity 200ms ease;
+    margin-left: -15px;
+    position: relative;
+    // margin-right: -15px;
+  }
+
+  .tns-item {
+    padding: 0 15px;
+  }
+  
+}
+
+.js-card-slider {
+  $arrowSize: 10px;
+  &__button_prev,
+  &__button_next {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 0;
+    font-size: 0;
+    cursor: pointer;
+    background: transparent;
+    color: transparent;
+    top: 0;
+    bottom: 0;
+    width: $arrowSize * 3;
+    border: none;
+    outline: none;
+    z-index: 2;
+    &:hover, &:focus {
+      outline: none;
+      background: transparent;
+      color: transparent;
+    }
+    &:before {
+      content: '';
+      display: block;
+      position: relative;
+      height: $arrowSize;
+      width: $arrowSize;
+      transform: translate(0, -50%) rotate(45deg);
+      border-width: 2px;
+      border-style: solid;
+      border-color: $black;
+      padding: 0;
+    }
+  }
+
+  &__button_prev {
+    left: -$arrowSize * 1.5;
+    &:before {
+      border-top: transparent;
+      border-right: transparent;
+    }
+  }
+  
+  &__button_next {
+    right: -$arrowSize * 3;
+    &:before {
+      border-bottom: transparent;
+      border-left: transparent;
+    }
+  }
+}
+
+// Large devices (desktops, < than 1200px)
+@include media-breakpoint-down(lg) {
+	.cases {
+
+    &__title {
+  
+      &::after {
+        margin-top: 1rem;
+      }
+    }
+
+    &__list_items {
+      margin-top: 2rem;
+      margin-bottom: 4rem;
+    }
+  }
+}
+
+// Small devices (landscape phones, < than 768px)
+@include media-breakpoint-down(sm) {
+  .js-card-slider {
+    &__button_prev,
+    &__button_next {
+      display: none;
+    }
+  }
+}
+
+@import "case";
+@import "case_card";
+@import "case_fields";

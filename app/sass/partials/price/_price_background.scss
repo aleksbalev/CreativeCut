@@ -1,0 +1,10 @@
+.price_background {
+  position: absolute;
+  z-index: -1;
+  top: -15rem;
+  right: -5rem;
+  width: 50vw;
+  max-width: 60rem;
+  color: $gray_9;
+  transform: rotate(180deg);
+}

@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'TeX Gyre DejaVu Math';
+  font-style: normal;
+  font-weight: 400;
+  src: local('TeX Gyre DejaVu Math'),
+       local('TeXGyreDejaVuMath-Regular'),
+       url('TeXGyreDejaVuMath/TeXGyreDejaVuMath-Regular.eot') format('embedded-opentype'),
+       url('TeXGyreDejaVuMath/TeXGyreDejaVuMath-Regular.woff2') format('woff2'),
+       url('TeXGyreDejaVuMath/TeXGyreDejaVuMath-Regular.woff') format('woff'),
+       url('TeXGyreDejaVuMath/TeXGyreDejaVuMath-Regular.ttf') format('truetype');
+}

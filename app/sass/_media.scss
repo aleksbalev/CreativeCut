@@ -1,0 +1,48 @@
+@import 'vars';
+
+/*==========  Desktop First  ==========*/
+
+// Large devices (desktops, < than 1200px)
+@include media-breakpoint-down(lg) {
+
+}
+
+// Medium devices (tablets, < than 992px)
+@include media-breakpoint-down(md) {
+
+}
+
+// Small devices (landscape phones, < than 768px)
+@include media-breakpoint-down(sm) {
+
+}
+
+// Extra small devices (portrait phones, < than 576px)
+@include media-breakpoint-down(xs) {
+
+}
+
+
+/*==========  Mobile First  ==========*/
+
+
+// Small devices (landscape phones, 576px and <)
+@include media-breakpoint-up(sm) {
+
+}
+
+// Medium devices (tablets, 768px and <)
+@include media-breakpoint-up(md) {
+
+}
+
+// Large devices (desktops, 992px and <)
+@include media-breakpoint-up(lg) {
+
+}
+
+// Extra large devices (large desktops, 1200px and <)
+@include media-breakpoint-up(xl) {
+
+}
+

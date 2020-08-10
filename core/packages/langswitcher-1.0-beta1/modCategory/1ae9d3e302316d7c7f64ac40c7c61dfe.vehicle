@@ -1,0 +1,85 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Chunks' => 
+    array (
+      '23a2c7868e0a89b6036a90ae5217563a' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modChunk',
+        'object' => '{"id":229,"source":0,"property_preprocess":0,"name":"lang","description":"","editor_type":0,"category":28,"cache_type":0,"snippet":"<div class=\\"language\\">\\n    {\'!languageLinks\' | snippet}\\n<\\/div>","locked":0,"properties":null,"static":0,"static_file":"","content":"<div class=\\"language\\">\\n    {\'!languageLinks\' | snippet}\\n<\\/div>"}',
+        'guid' => 'bd4db6311d57bd10341e48838d47639d',
+        'native_key' => 229,
+        'signature' => '3ef9e7f903772568039dcc68656ab6d0',
+      ),
+      'dd3eff600b7b570a46d83c7b835c912a' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modChunk',
+        'object' => '{"id":228,"source":0,"property_preprocess":0,"name":"lang_item","description":"","editor_type":0,"category":28,"cache_type":0,"snippet":"<a href=\\"{$link}\\">{$lang}<\\/a>","locked":0,"properties":"a:1:{s:4:\\"lang\\";a:7:{s:4:\\"name\\";s:4:\\"lang\\";s:4:\\"desc\\";s:0:\\"\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:4:\\"None\\";s:7:\\"lexicon\\";N;s:4:\\"area\\";s:0:\\"\\";}}","static":0,"static_file":"","content":"<a href=\\"{$link}\\">{$lang}<\\/a>"}',
+        'guid' => 'ee4a7cfeb75627e7acaad8ea20ee6a8a',
+        'native_key' => 228,
+        'signature' => '9fb1d36f80b36c68bef47a32011d039e',
+      ),
+    ),
+    'Snippets' => 
+    array (
+      'c47dfa07ce777712347278adcb3d3e28' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modSnippet',
+        'object' => '{"id":182,"source":2,"property_preprocess":0,"name":"languageLinks","description":"","editor_type":0,"category":28,"cache_type":0,"snippet":"$tpl = $modx->getOption(\'tpl\',null,\'lang_item\');\\n$pdoTools = $modx->getService(\'pdoTools\');\\n\\n$output = \'\';\\n$placeholders = array(\'init\' => true);\\n$contexts = $modx->getCollection(\'modContext\');\\n\\n$output = \'\';\\nforeach ($contexts as $context) {\\n    if (($context->key != \'mgr\') && ($context->key != $modx->context->key)) {\\n        $obj = $modx->getContext($context->key);\\n        $settings = $obj->config;\\n        $placeholders[\'id\'] = $settings[\'site_start\'];\\n        $placeholders[\'lang\'] = $settings[\'lang_name\'];\\n        $placeholders[\'link\'] = $modx->makeUrl($placeholders[\'id\']);\\n        $output .= $pdoTools->getChunk($tpl, $placeholders);\\n    }\\n}\\n\\nreturn $output;","locked":0,"properties":"a:1:{s:9:\\"lang_item\\";a:7:{s:4:\\"name\\";s:9:\\"lang_item\\";s:4:\\"desc\\";s:0:\\"\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:0:\\"\\";s:7:\\"lexicon\\";N;s:4:\\"area\\";s:0:\\"\\";}}","moduleguid":"","static":0,"static_file":"","content":"$tpl = $modx->getOption(\'tpl\',null,\'lang_item\');\\n$pdoTools = $modx->getService(\'pdoTools\');\\n\\n$output = \'\';\\n$placeholders = array(\'init\' => true);\\n$contexts = $modx->getCollection(\'modContext\');\\n\\n$output = \'\';\\nforeach ($contexts as $context) {\\n    if (($context->key != \'mgr\') && ($context->key != $modx->context->key)) {\\n        $obj = $modx->getContext($context->key);\\n        $settings = $obj->config;\\n        $placeholders[\'id\'] = $settings[\'site_start\'];\\n        $placeholders[\'lang\'] = $settings[\'lang_name\'];\\n        $placeholders[\'link\'] = $modx->makeUrl($placeholders[\'id\']);\\n        $output .= $pdoTools->getChunk($tpl, $placeholders);\\n    }\\n}\\n\\nreturn $output;"}',
+        'guid' => '4dd86e43ee15c2ef9d9133acffe30853',
+        'native_key' => 182,
+        'signature' => '23989f74fb1af40a9b99eb5bee11791c',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Chunks' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'TemplateVars' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Templates' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'templatename',
+    ),
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+  ),
+  'namespace' => 'langswitcher',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '744545a0f4c8ce8217829671882602a3',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '1ae9d3e302316d7c7f64ac40c7c61dfe',
+  'native_key' => 1,
+  'object' => '{"id":1,"parent":0,"category":"langSwitcher","rank":0}',
+);

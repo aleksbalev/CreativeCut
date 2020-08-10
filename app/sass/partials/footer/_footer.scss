@@ -1,0 +1,41 @@
+.footer {
+  position: relative;
+  letter-spacing: 0.02em;
+  color: $black;
+  font-weight: 300;
+  
+  &__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  li {
+    list-style: none;
+
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+  }
+}
+
+// Medium devices (tablets, < than 992px)
+@include media-breakpoint-down(md) {
+  .footer {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin: 0;
+  }
+}
+
+// @import "footer_line";
+@import "footer_block";
+
+@import "components/socmedia";
+@import "components/go_top_button";
+@import "components/copywrite";

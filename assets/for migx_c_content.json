@@ -1,0 +1,65 @@
+[{
+  "formname":"Text"
+  ,"formtabs": [{
+      "caption":"Text"
+      ,"fields": [{
+          "field":"fake"
+          ,"inputTVtype":"hidden"
+      },{
+            "field": "is_short",
+            "caption": "Short",
+            "inputTVtype": "option",
+            "inputOptionValues":"Yes==true||No==false",
+            "default":"false"
+      },{
+          "field":"cell_2_text"
+          ,"caption":"Text"
+          ,"inputTVtype":"hidden"
+      },{
+        "field":"cell_1_text"
+        ,"caption":"Text"
+        ,"inputTVtype":"richtext"
+    }]
+  }]
+},{
+  "formname":"Text + Text"
+  ,"formtabs": [{
+      "caption":"Text + Text"
+      ,"fields": [{
+          "field":"fake"
+          ,"inputTVtype":"hidden"
+      },{
+        "field": "is_short",
+        "caption": "Short",
+        "inputTVtype": "option",
+        "inputOptionValues":"Yes==true||No==false",
+        "default":"false"
+      },{
+        "field":"cell_1_text"
+        ,"caption":"Text"
+        ,"inputTVtype":"richtext"
+      },{
+        "field":"cell_2_text"
+        ,"caption":"Text"
+        ,"inputTVtype":"richtext"
+      }]
+  }]
+}]
+
+
+[{
+    "header": "Row Format"
+    ,"width": "30"
+    ,"sortable": "true"
+    ,"dataIndex": "MIGX_formname"
+},{
+    "header": "Text 1"
+    ,"width": "160"
+    ,"sortable": "false"
+    ,"dataIndex": "cell_1_text"
+},{
+    "header": "Text 2"
+    ,"width": "160"
+    ,"sortable": "false"
+    ,"dataIndex": "cell_2_text"
+}]

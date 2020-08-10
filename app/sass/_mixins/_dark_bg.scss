@@ -1,0 +1,19 @@
+@mixin dark_bg($op:0.8,$bgc:$accent-3, $c:$white){
+  color: $c;
+  position: relative;
+
+  &:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $bgc;
+    opacity: $op;
+  }
+  
+  & > *{
+    position: relative;
+  }
+}

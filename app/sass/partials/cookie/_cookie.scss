@@ -1,0 +1,48 @@
+.cookie {
+  display: none;
+  background: rgba($white, 0.9);
+  border-top: 1px solid $black;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  padding: 1.5rem 3rem;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 400ms ease 0s;
+  z-index: 2000000;
+  
+  &__close {
+    z-index: 2000004;
+    cursor: pointer;
+    color: $black;
+    font-size: 18px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: block;
+  }
+  &__title {
+    font-size: 18px;
+    color: $black;
+    margin-bottom: 5px;
+  }
+  &__text {
+    color: $black;
+    font-size: 12px;
+  }
+  &__ok {
+    background-color: transparent;
+    color: $black;
+    border: none;
+    text-decoration: underline;
+
+    &:hover, &:focus {
+      background-color: transparent;
+      color: $black;
+      border: none;
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+.search_form {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  width: 3rem;
+  justify-content: flex-end;
+  align-items: center;
+  border-bottom: 2px solid $black;
+  overflow: hidden;
+  transition: width 300ms ease-out;
+  
+  &:hover,
+  &:focus,
+  &.open,
+  &--fixed & {
+    width: 30rem;
+  }
+
+  &__input {
+    padding: 0 5px;
+    
+    &, &:hover, &:focus {
+      background-color: $white;
+    }
+  }
+
+  &__button {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    padding: 0 0.8rem;
+    
+    svg {
+      width: 16px;
+      height: 15px;
+    }
+
+    &:hover, &:focus {
+      outline: none;
+    }
+  }
+}
+
+// Extra small devices (portrait phones, < than 576px)
+@include media-breakpoint-down(xs) {
+  .search_form {
+    
+    &:hover, &:focus, &.open, &--fixed &  {
+      width: calc(100vw - 30px);
+    }
+  }
+}

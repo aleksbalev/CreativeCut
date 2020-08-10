@@ -1,0 +1,181 @@
+[
+    {
+        "formname": "G1",
+        "formtabs": [
+            {
+                "caption": "G1",
+                "fields": [
+                    {
+                        "field": "type_field",
+                        "caption": "G1",
+                        "inputTV": "field_1"
+                    },
+                    {
+                        "field": "caption",
+                        "caption": "Caption",
+                        "inputTVtype": "text"
+                    },
+                    {
+                        "field": "caption_align",
+                        "caption": "Caption align",
+                        "inputTVtype": "option",
+                        "inputOptionValues":"Left==left||Right==right||Center==center",
+                        "default":"left"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "formname": "G2",
+        "formtabs": [
+            {
+                "caption": "G2",
+                "fields": [
+                    {
+                        "field": "type_field",
+                        "caption": "G2",
+                        "inputTV": "field_2"
+                    },
+                    {
+                        "field": "caption",
+                        "caption": "Caption",
+                        "inputTVtype": "text"
+                    },
+                    {
+                        "field": "caption_align",
+                        "caption": "Caption align",
+                        "inputTVtype": "option",
+                        "inputOptionValues":"Left==left||Right==right||Center==center",
+                        "default":"left"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "formname": "G3",
+        "formtabs": [
+            {
+                "caption": "G3",
+                "fields": [
+                    {
+                        "field": "type_field",
+                        "caption": "G3",
+                        "inputTV": "field_4"
+                    },
+                    {
+                        "field": "caption",
+                        "caption": "Caption",
+                        "inputTVtype": "text"
+                    },
+                    {
+                        "field": "caption_align",
+                        "caption": "Caption align",
+                        "inputTVtype": "option",
+                        "inputOptionValues":"Left==left||Right==right||Center==center",
+                        "default":"left"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "formname": "G4",
+        "formtabs": [
+            {
+                "caption": "G4",
+                "fields": [
+                    {
+                        "field": "type_field",
+                        "caption": "G4",
+                        "inputTV": "field_3"
+                    },
+                    {
+                        "field": "caption",
+                        "caption": "Caption",
+                        "inputTVtype": "text"
+                    },
+                    {
+                        "field": "caption_align",
+                        "caption": "Caption align",
+                        "inputTVtype": "option",
+                        "inputOptionValues":"Left==left||Right==right||Center==center",
+                        "default":"left"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "formname": "G5",
+        "formtabs": [
+            {
+                "caption": "G5",
+                "fields": [
+                    {
+                        "field": "type_field",
+                        "caption": "G5",
+                        "inputTV": "field_3"
+                    },
+                    {
+                        "field": "caption",
+                        "caption": "Caption",
+                        "inputTVtype": "text"
+                    },
+                    {
+                        "field": "caption_align",
+                        "caption": "Caption align",
+                        "inputTVtype": "option",
+                        "inputOptionValues":"Left==left||Right==right||Center==center",
+                        "default":"left"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "formname": "G6",
+        "formtabs": [
+            {
+                "caption": "G6",
+                "fields": [
+                    {
+                        "field": "type_field",
+                        "caption": "G6",
+                        "inputTV": "field_2"
+                    },
+                    {
+                        "field": "caption",
+                        "caption": "Caption",
+                        "inputTVtype": "text"
+                    },
+                    {
+                        "field": "caption_align",
+                        "caption": "Caption align",
+                        "inputTVtype": "option",
+                        "inputOptionValues":"Left==left||Right==right||Center==center",
+                        "default":"left"
+                    }
+                ]
+            }
+        ]
+    }
+]
+
+
+
+
+[
+    {
+        "header": "Type",
+        "width": "80",
+        "sortable": "true",
+        "dataIndex": "MIGX_formname"
+    },
+    {
+        "header": "Caption",
+        "sortable": "false",
+        "dataIndex": "caption"
+    }
+]

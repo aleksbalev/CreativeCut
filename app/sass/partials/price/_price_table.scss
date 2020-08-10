@@ -1,0 +1,163 @@
+$priceTableBorder: 1px solid $gray_10;
+.price_table {
+  width: 100%;
+  border-top: $priceTableBorder;
+  border-bottom: $priceTableBorder;
+  display: none;
+  opacity: 0;
+  transition: opacity 200ms ease;
+
+  &--active {
+    display: table;
+    opacity: 1;
+  }
+
+  &__row {
+    font-size: 2rem;
+
+    &:not(:last-child) {
+      border-bottom: $priceTableBorder;
+    }
+
+    &--highlight {
+      background-color: $accent;
+      color: $white;
+    }
+  }
+
+  &__col {
+    padding: 3rem;
+
+    &:not(:last-child) {
+      border-right: $priceTableBorder;
+    }
+  }
+
+  &__price {
+    font-size: 2.4rem;
+    font-weight: 400;
+    color: $gray_5;
+    white-space: nowrap;
+
+    &--highlight {
+      font-weight: 700;
+      font-size: 3rem;
+      color: $white;
+    }
+  }
+
+  &__header {
+    font-size: 1.6rem;
+
+    * {
+      font-weight: 300;
+      color: $gray_5;
+    }
+  }
+}
+
+@supports (display: grid) {
+  .price_table {
+    
+    &__row {
+      display: grid;
+      
+      &--2 {
+        grid-template-columns: minmax(10rem, 0.2fr) 1fr;
+        min-width: 25rem;
+      }
+      &--3 {
+        grid-template-columns: minmax(10rem, 0.4fr) 1fr 1fr;
+        min-width: 25rem;
+      }
+      &--4 {
+        grid-template-columns: minmax(10rem, 0.6fr) 1fr 1fr 1fr;
+        min-width: 45rem;
+      }
+      &--5 {
+        grid-template-columns: minmax(10rem, 0.8fr) 1fr 1fr 1fr 1fr;
+        min-width: 65rem;
+      }
+
+      &--highlight {
+        background-color: transparent;
+        border: 1px solid $accent !important;
+        color: $black;
+      }
+    }
+
+    &__col {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      &.center {
+        justify-content: center;
+      }
+
+      &.right {
+        justify-content: right;
+      }
+
+      &[colspan="2"] {
+        grid-column: span 2;
+        justify-content: center;
+      }
+
+      &[colspan="3"] {
+        grid-column: span 3;
+        justify-content: center;
+      }
+    }
+
+    &__price {
+      &--highlight {
+        color: $accent;
+      }
+    }
+  }
+}
+
+
+// Medium devices (tablets, < than 992px)
+@include media-breakpoint-down(md) {
+  .price_table {
+  
+    &__row {
+      font-size: 1.6rem;
+    }
+  
+    &__col {
+      padding: 1rem;
+    }
+  
+    &__price {
+      font-size: 1.8rem;
+  
+      &--highlight {
+        font-size: 2rem;
+      }
+    }
+  
+    &__header {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+// Extra small devices (portrait phones, < than 576px)
+@include media-breakpoint-down(xs) {
+  .price_table {
+    overflow-x: auto;
+
+    &--active {
+      @supports (display: grid) {
+        display: block;
+      }
+    }
+
+    &__body {
+      display: block;
+    }
+  }
+}

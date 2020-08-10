@@ -1,0 +1,39 @@
+.footer_block {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.footer {
+  
+  &__blocks {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  &__block {
+    padding-left: 0;
+    margin-right: 3rem;
+    padding-bottom: 2rem;
+    width: 300px;
+    max-width: 100%;
+  }
+}
+
+// Extra small devices (portrait phones, < than 576px)
+@include media-breakpoint-down(xs) {
+  .footer {
+
+    &__blocks {
+      text-align: center;
+    }
+
+    &__block {
+      width: 100%;
+      padding-left: 0;
+      line-height: 2;
+    }
+  }
+}

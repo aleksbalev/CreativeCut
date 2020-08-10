@@ -1,0 +1,25 @@
+.gallery{
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 6rem;
+	&__item{
+		padding: 0.5rem;
+		cursor: pointer;
+		a{
+			box-shadow: 0 0 0 0 $acc;
+			display: block;
+			transition: box-shadow 200ms;
+			&:hover, &:focus{
+				box-shadow: 0 0 0 3px $acc;
+			}
+		}
+	}
+	@supports (display: grid) {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+		gap: 1rem;
+		&__item{
+			padding: 0;
+		}
+	}
+}

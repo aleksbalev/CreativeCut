@@ -1,0 +1,57 @@
+.bg {
+	&--narrow {
+		@include container($maxw:700px);
+	}
+	&--no {
+		@include container($maxw:1200px);
+	}
+	&--accent {
+		background: $accent;
+	}
+	&--dark {
+		background: $gray;
+	}
+	&--light {
+		background: $light;
+	}
+	&--dark,
+	&--accent {
+		@include padding($y:0.1px);
+
+		h1, h2, .h1, .h2, h3, h3 *{
+			color: $white;
+			a:hover, a:focus{
+				color: $accent-1;
+				text-decoration: none;
+			}
+		}
+		p{
+			color: $white;
+			opacity: 0.6;
+		}
+	}
+
+	@for $i from 0 to 10 {
+
+		$i: 1 + $i;
+		$color: $i * 10%;
+		
+		@if $i == 10 {
+			&_gray_#{$i} {
+				background-color: hsl(0, 0%, 95%);
+			}
+		}
+		@else {
+			&_gray_#{$i} {
+				background-color: hsl(0, 0%, $color);
+			}
+		}
+    
+	}
+}
+
+.fill_bg {
+  background-position: center;
+  background-size: cover;
+  @include padding($y:0.1px);
+}

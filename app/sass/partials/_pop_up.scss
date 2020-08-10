@@ -1,0 +1,150 @@
+.gallery{
+  &__wrap{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      position:fixed;
+      z-index:9999;
+      background:rgba(0,0,0,.9);
+      cursor:zoom-out;
+      top:0;
+      left:0;
+      right:0;
+      bottom:0
+  }
+  &__popup{
+      height:100%;
+      display:flex;
+      align-items:center;
+      justify-content:center
+  }
+  &__popup img{
+      cursor:auto;
+      max-height:95%;
+      max-width:95%
+  }
+  &__close{
+      position:absolute;
+      right:1.5rem;
+      top:1.5rem;
+      cursor:pointer;
+      padding:1rem;
+      z-index:9999;
+      width:68px;
+      height:68px
+  }
+  &__close::after, &__close::before{
+      content:'';
+      position:absolute;
+      display:block;
+      width:100%;
+      height:1px;
+      top:3.5rem;
+      left:0;
+      background-color:#fff
+  }
+  &__close::before{
+      transform:rotate(-45deg)
+  }
+  &__close::after{
+      transform:rotate(45deg)
+  }
+  &__arrow{
+      position:absolute;
+      cursor:pointer;
+      padding:1rem;
+      z-index:9999;
+      width:10rem;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      height:100%;
+      &::before{
+          content:'';
+          position:absolute;
+          display:block;
+          width:6rem;
+          height:6rem;
+          border:1px solid #fff;
+          border-top-color:transparent;
+          border-left-color:transparent;
+      }
+      &--preview{
+          left:0
+      }
+      &--preview::before{
+          transform:rotate(135deg) translate(-30%,-20%)
+      }
+      &--next{
+          right:0
+      }
+      &--next::before{
+          transform:rotate(-45deg) translate(-60%,-70%);
+          left:56px
+      }
+  }
+  &__body{
+      margin-top:2rem
+  }
+  &__footer{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      flex-direction:row-reverse;
+      justify-content:space-between;
+      margin-top:3rem
+  }
+  &__footer button{
+      margin-right:0
+  }
+  &__footer span{
+      width:60%
+  }
+  &__footer span a{
+      text-decoration:underline
+  }
+  &__footer span a:focus,.gallery__footer span a:hover{
+      color:orange
+  }
+  &__footer span,.gallery__footer span a{
+      font-size:1.2rem;
+      color:#666;
+      line-height:1
+  }
+}
+.fadeDown{
+    display:none;
+    opacity:0
+}
+.fadeIn{
+    animation:fadeIn 250ms forwards
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:scale(.9)
+    }
+    to{
+        opacity:1;
+        transform:scale(1)
+    }
+}
+#modalBg{
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
+    position:fixed
+}
+
+@media (max-width:440px){
+    .gallery__footer{
+        flex-direction:column-reverse
+    }
+    .gallery__footer span{
+        width:100%;
+        text-align:center;
+        margin-bottom:2rem
+    }
+}

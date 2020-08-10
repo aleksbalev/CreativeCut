@@ -1,0 +1,127 @@
+@import "slick/slick";
+
+$slick-arrow-color: $white !default;
+$slick-dot-color: $black !default;
+$slick-dot-color-active: $accent-1 !default;
+$slick-opacity-default: 1 !default;
+$slick-opacity-on-hover: 1 !default;
+$slick-opacity-not-active: 1 !default;
+
+$arrowSize: 10px;
+
+/* Arrows */
+
+.slick-prev,
+.slick-next {
+  position: absolute;
+  display: block;
+  height: $arrowSize;
+  width: $arrowSize;
+  line-height: 0;
+  font-size: 0;
+  cursor: pointer;
+  background: transparent;
+  color: transparent;
+  top: 50%;
+  transform: translate(0, -50%) rotate(45deg);
+  border-width: 2px;
+  border-style: solid;
+  border-color: $black;
+  padding: 0;
+  outline: none;
+  z-index: 2;
+  &:hover, &:focus {
+    outline: none;
+    background: transparent;
+    color: transparent;
+    &:before {
+      opacity: $slick-opacity-on-hover;
+    }
+  }
+  &.slick-disabled:before {
+    opacity: $slick-opacity-not-active;
+  }
+  &:before {
+    font-size: $arrowSize;
+    line-height: 1;
+    color: $slick-arrow-color;
+    opacity: $slick-opacity-default;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.slick-prev {
+  left: -10px;
+  border-top: transparent;
+  border-right: transparent;
+}
+
+.slick-next {
+  right: -10px;
+  border-bottom: transparent;
+  border-left: transparent;
+}
+
+/* Dots */
+
+.slick-dots {
+  position: absolute;
+  right: 3%;
+  bottom: 4rem;
+  list-style: none;
+  display: inline-flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  z-index: 2;
+  li {
+    position: relative;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    margin: 0;
+    padding: 5px;
+    cursor: pointer;
+    button {
+      border: 1px solid $slick-dot-color;
+      display: block;
+      height: 8px;
+      border-radius: 50%;
+      width: 8px;
+      outline: none;
+      line-height: 0;
+      font-size: 0;
+      background-color: transparent;
+      padding: 5px;
+      cursor: pointer;
+      transition: all 200ms ease-in-out;
+      &:hover, &:focus {
+        outline: none;
+        background-color: $slick-dot-color;
+      }
+    }
+    &.slick-active button {
+      background-color: $slick-dot-color-active;
+      opacity: $slick-opacity-default;
+    }
+  }
+}
+
+// Medium devices (tablets, < than 992px)
+@include media-breakpoint-down(md) {
+  .slick-prev {
+    left: 0;
+  }
+  
+  .slick-next {
+    right: 0;
+  }
+}
+
+// Small devices (landscape phones, < than 768px)
+@include media-breakpoint-down(sm) {
+  .slick-dots {
+    right: 15px;
+  }
+}

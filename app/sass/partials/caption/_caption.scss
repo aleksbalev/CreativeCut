@@ -1,0 +1,28 @@
+.caption {
+  margin-top: 10px;
+
+  &--left {
+    text-align: left;
+  }
+
+  &--right {
+    text-align: right;
+  }
+
+  &--center {
+    text-align: center;
+  }
+}
+
+
+// Small devices (landscape phones, < than 768px)
+@include media-breakpoint-down(sm) {
+  .caption {
+  
+    &--left,
+    &--right,
+    &--center {
+      text-align: left;
+    }
+  }
+}

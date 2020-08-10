@@ -1,0 +1,47 @@
+{
+  "name": "basic-package-2-1",
+  "version": "2.1.0",
+  "description": "Basic ModX + parcel + Vue js",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel watch app/js/common.js --out-dir assets/tmpl --public-url ./",
+    "build": "parcel build app/js/common.js --out-dir assets/tmpl --public-url ./",
+    "lazy": "parcel build app/js/lazyload.js --out-dir assets/tmpl --public-url ./",
+    "app": "parcel watch app/js/app/app.js --out-dir assets/tmpl --public-url ./",
+    "appBuild": "parcel build app/js/app/app.js --out-dir assets/tmpl --public-url ./",
+    "formBuild": "parcel build app/js/form/form_validate_ru.js --out-dir assets/tmpl/libs/form_validate --public-url ./",
+    "buildBackentStyle": "parcel build app/sass/backendStyles.scss --out-dir assets/tmpl --public-url ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/ebalev/budgetpackage.git"
+  },
+  "keywords": [],
+  "author": "Eduard Balev",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/ebalev/budgetpackage#readme",
+  "dependencies": {
+    "@babel/preset-react": "^7.6.3",
+    "app": "^0.1.0",
+    "autoprefixer": "^9.6.5",
+    "babel-polyfill": "^6.26.0",
+    "gsap": "^2.1.3",
+    "localization": "^1.0.2",
+    "postcss-modules": "^1.4.1",
+    "sass": "^1.23.0",
+    "vue": "^2.6.10",
+    "vue-hot-reload-api": "^2.3.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@vue/component-compiler-utils": "^3.0.0",
+    "jquery": "^3.4.1",
+    "jquery-validation": "^1.19.1",
+    "moment": "^2.24.0",
+    "parcel-bundler": "^1.12.4",
+    "slick-carousel": "^1.8.1",
+    "tiny-slider": "^2.9.2",
+    "typescript": "^3.6.4",
+    "vue-template-compiler": "^2.6.10"
+  }
+}

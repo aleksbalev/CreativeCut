@@ -1,0 +1,67 @@
+$directions: y, x, t, b, l, r;
+
+@each $direction in $directions {
+  .padding_#{$direction}_auto {
+    $auto: auto;
+
+    @if $direction == y {
+      @include padding($y: $auto);
+    } @else if $direction == x {
+      @include padding($x: $auto);
+    } @else if $direction == t {
+      @include padding($t: $auto);
+    } @else if $direction == b {
+      @include padding($b: $auto);
+    } @else if $direction == l {
+      @include padding($l: $auto);
+    } @else if $direction == r {
+      @include padding($r: $auto);
+    } @else {
+      @include padding($p: $auto);
+    }
+  }
+
+  @for $i from 0 to 20 {
+
+    $step: 10 * $i;
+
+    .padding_#{$direction}_#{$step} {
+      @if $direction == y {
+        @include padding($y: $step+px);
+      } @else if $direction == x {
+        @include padding($x: $step+px);
+      } @else if $direction == t {
+        @include padding($t: $step+px);
+      } @else if $direction == b {
+        @include padding($b: $step+px);
+      } @else if $direction == l {
+        @include padding($l: $step+px);
+      } @else if $direction == r {
+        @include padding($r: $step+px);
+      } @else {
+        @include padding($p: $step+px);
+      }
+
+      @if $i > 7 {
+        @include media-breakpoint-down(sm) {
+          $mediaStep: $step * (3/4);
+          @if $direction == y {
+            @include padding($y: $mediaStep+px);
+          } @else if $direction == x {
+            @include padding($x: $mediaStep+px);
+          } @else if $direction == t {
+            @include padding($t: $mediaStep+px);
+          } @else if $direction == b {
+            @include padding($b: $mediaStep+px);
+          } @else if $direction == l {
+            @include padding($l: $mediaStep+px);
+          } @else if $direction == r {
+            @include padding($r: $mediaStep+px);
+          } @else {
+            @include padding($p: $mediaStep+px);
+          }
+        }
+      }
+    }
+  }
+}

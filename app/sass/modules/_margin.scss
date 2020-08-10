@@ -1,0 +1,67 @@
+$directions: y, x, t, b, l, r;
+
+@each $direction in $directions {
+  .margin_#{$direction}_auto {
+    $auto: auto;
+
+    @if $direction == y {
+      @include margin($y: $auto);
+    } @else if $direction == x {
+      @include margin($x: $auto);
+    } @else if $direction == t {
+      @include margin($t: $auto);
+    } @else if $direction == b {
+      @include margin($b: $auto);
+    } @else if $direction == l {
+      @include margin($l: $auto);
+    } @else if $direction == r {
+      @include margin($r: $auto);
+    } @else {
+      @include margin($m: $auto);
+    }
+  }
+
+  @for $i from 0 to 20 {
+
+    $step: 10 * $i;
+
+    .margin_#{$direction}_#{$step} {
+      @if $direction == y {
+        @include margin($y: $step+px);
+      } @else if $direction == x {
+        @include margin($x: $step+px);
+      } @else if $direction == t {
+        @include margin($t: $step+px);
+      } @else if $direction == b {
+        @include margin($b: $step+px);
+      } @else if $direction == l {
+        @include margin($l: $step+px);
+      } @else if $direction == r {
+        @include margin($r: $step+px);
+      } @else {
+        @include margin($m: $step+px);
+      }
+
+      @if $i > 7 {
+        @include media-breakpoint-down(sm) {
+          $mediaStep: $step * (3/4);
+          @if $direction == y {
+            @include margin($y: $mediaStep+px);
+          } @else if $direction == x {
+            @include margin($x: $mediaStep+px);
+          } @else if $direction == t {
+            @include margin($t: $mediaStep+px);
+          } @else if $direction == b {
+            @include margin($b: $mediaStep+px);
+          } @else if $direction == l {
+            @include margin($l: $mediaStep+px);
+          } @else if $direction == r {
+            @include margin($r: $mediaStep+px);
+          } @else {
+            @include margin($m: $mediaStep+px);
+          }
+        }
+      }
+    }
+  }
+}

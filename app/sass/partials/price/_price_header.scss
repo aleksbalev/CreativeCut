@@ -1,0 +1,55 @@
+.price_header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+
+  &__button {
+    padding: 2rem 3rem;
+    border: none;
+    border-bottom: 2px solid transparent;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    color: $gray_5;
+    transition: all 200ms ease;
+    background: transparent;
+
+    &:hover,
+    &:focus {
+      color: $black;
+      outline: none;
+    }
+
+    &--active {
+      color: $accent;
+      border-bottom-color: $accent;
+
+      &:hover,
+      &:focus  {
+        color: $accent;
+      }
+    }
+  }
+}
+
+
+// Small devices (landscape phones, < than 768px)
+@include media-breakpoint-down(sm) {
+  .price_header {
+
+    &__button {
+      padding: 1rem 1rem;
+    }
+  }
+}
+
+
+// Extra small devices (portrait phones, < than 576px)
+@include media-breakpoint-down(xs) {
+  .price_header {
+
+    & > * {
+      width: 50%;
+    }
+  }
+}

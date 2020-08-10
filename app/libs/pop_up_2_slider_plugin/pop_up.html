@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>pop up</title>
+</head>
+<body>
+
+	<section class="center">
+        <div id="gallery" class="gallery">
+            <div class="gallery__item" data-portfolio-item="img/gallery/normal/11.jpg"><img src="img/gallery/mini/11.jpg" alt=""></div>
+            <div class="gallery__item" data-portfolio-item="img/gallery/normal/22.jpg"><img src="img/gallery/mini/22.jpg" alt=""></div>
+            <div class="gallery__item" data-portfolio-item="img/gallery/normal/33.jpg"><img src="img/gallery/mini/33.jpg" alt=""></div>
+            <div class="gallery__item" data-portfolio-item="img/gallery/normal/44.jpg"><img src="img/gallery/mini/44.jpg" alt=""></div>
+            <div class="gallery__item" data-portfolio-item="img/gallery/normal/55.jpg"><img src="img/gallery/mini/55.jpg" alt=""></div>
+            <div class="gallery__item" data-portfolio-item="img/gallery/normal/66.jpg"><img src="img/gallery/mini/66.jpg" alt=""></div>
+            <div class="gallery__item" data-portfolio-item="img/gallery/normal/77.jpg"><img src="img/gallery/mini/77.jpg" alt=""></div>
+            <div class="gallery__item" data-portfolio-item="img/gallery/normal/88.jpg"><img src="img/gallery/mini/88.jpg" alt=""></div>
+            <div class="gallery__item" data-portfolio-item="img/gallery/normal/99.jpg"><img src="img/gallery/mini/99.jpg" alt=""></div>
+        </div>
+    </section>
+	
+
+	<link rel="stylesheet" href="css/pop_up.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+	    window.jQuery || document.write('<script src="jquery/dist/jquery.min.js"><\/script>');
+	</script>
+	<script src="js/pop_up_js.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#gallery').rdmSlider();
+        });
+    </script>
+</body>
+</html>

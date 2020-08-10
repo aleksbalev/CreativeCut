@@ -1,0 +1,19 @@
+.contact_map {
+  height: 0;
+  transition: height 300ms ease-out;
+
+  &--open {
+    height: 40rem;
+  }
+}
+
+
+// Small devices (landscape phones, < than 768px)
+@include media-breakpoint-down(sm){
+  .contact_map {
+
+    &--open {
+      height: 25rem;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+.content_custom {
+
+  ul {
+    padding: 0;
+
+    li {
+      list-style: none;
+    }
+  }
+  
+  &__row {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  &__col {
+    flex-grow: 1;
+    width: 50%;
+
+    &--text {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+// Small devices (landscape phones, < than 768px)
+@include media-breakpoint-down(sm) {
+  .content_custom {
+    
+    &__row {
+      flex-wrap: wrap;
+    }
+  
+    &__col {
+      width: 100%;
+    }
+  }
+}
+
+// Large devices (desktops, 992px and <)
+@include media-breakpoint-up(lg) {
+  .content_custom {
+
+    &__row {
+      &--short {
+        width: 60%;
+        min-width: 700px;
+      }
+    }
+
+    &__col + &__col {
+      margin-left: 40px;
+    }
+  }
+}

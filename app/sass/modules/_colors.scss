@@ -1,0 +1,36 @@
+$black: hsl(0, 0%, 0%);
+$white: hsl(0, 0%, 100%);
+
+$light: rgb(247, 247, 247);
+$dark: hsl(0, 0%, 15%);
+
+$gray: hsl(0, 0%, 50%);
+$gray_1: hsl(0, 0%, 10%);
+$gray_2: hsl(0, 0%, 20%);
+$gray_3: hsl(0, 0%, 30%);
+$gray_4: hsl(0, 0%, 40%);
+$gray_5: hsl(0, 0%, 50%);
+$gray_6: hsl(0, 0%, 60%);
+$gray_7: hsl(0, 0%, 70%);
+$gray_8: hsl(0, 0%, 80%);
+$gray_9: hsl(0, 0%, 90%);
+$gray_10: hsl(0, 0%, 95%);
+
+$accent: hsl(208, 71%, 16%);
+$accent-1: hsl(208, 71%, 16%);
+$accent-2: hsl(209, 63%, 20%);
+$accent-3: hsl(232, 17%, 65%);
+$accent-3-d: hsl(209, 63%, 20%);
+
+$warning: hsl(0, 100%, 50%);
+$alert: hsl(39, 100%, 50%);
+$success: hsl(120, 63%, 43%);
+
+
+.color_invert{
+  color: $white;
+}
+
+.color_accent {
+  color: $accent;
+}

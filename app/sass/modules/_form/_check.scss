@@ -1,0 +1,78 @@
+.check {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  margin: 5px 0 8px;
+  span.error{
+    display: none !important;
+  }
+  label + span {
+    margin-left: 3rem;
+  }
+  input[type=checkbox], input[type=radio] {
+    visibility: hidden;
+    position: absolute;
+    left: -1000rem;
+  }
+  & label {
+    cursor: pointer;
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    top: 0;
+    margin: 2px 0;
+    border-radius: 3px;
+    background: rgba($white, $fotm-opacity);
+    transition: all 200ms ease-in-out;
+  }
+
+  & label:after {
+    filter: alpha(opacity=0);
+    opacity: 0;
+    content: '';
+    position: absolute;
+    width: 1.2rem;
+    height: 0.6rem;
+    background: transparent;
+    top: 5px;
+    left: 4px;
+    border: 2px solid green;
+    border-top: none;
+    border-right: none;
+    transform: rotate(-45deg);
+    transition: filter 200ms ease-in-out;
+  }
+
+  & label:hover {
+    background: $white;
+  }
+
+  & label:hover::after {
+    filter: alpha(opacity=30);
+    opacity: 0.3;
+  }
+
+  & input[type=checkbox]:focus + label, & input[type=radio]:focus + label {
+    background: rgba($white, $fotm-opacity-hover);
+  }
+
+  & input[type=checkbox]:checked + label, & input[type=radio]:checked + label {
+    background: rgba($white, $fotm-opacity-hover);
+  }
+
+
+  & input[type=checkbox]:checked + label:after, & input[type=radio]:checked + label:after {
+    filter: alpha(opacity=100);
+    opacity: 1;
+  }
+  & input[type=checkbox] + .error + label, & input[type=radio] + .error + label {
+    box-shadow: 0 0 5px red;
+  }
+  & input[type=checkbox]:checked + .error + label, & input[type=radio]:checked + .error + label {
+    box-shadow: 0 0 0 red;
+  }
+  & input[type=checkbox]:checked + .error + label:after, & input[type=radio]:checked + .error + label:after {
+    filter: alpha(opacity=100);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,11 @@
+.news{
+	margin-bottom: 6rem;
+	&__footer{
+		display: flex;
+		justify-content: center;
+		padding-top: 3rem;
+	}
+}
+
+@import 'components/new_card';
+@import 'components/new_page';

@@ -1,0 +1,7 @@
+Design
+node_modules
+core/cache/*
+assets/cache_image/**/*.jpg
+core/config/local/local_config.php
+.idea
+.cache

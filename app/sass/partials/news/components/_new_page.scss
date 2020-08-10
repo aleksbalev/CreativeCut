@@ -1,0 +1,38 @@
+.new_page {
+  margin-bottom: 6rem;
+
+  &__date {
+    margin: 1.5rem 0 1rem;
+  }
+
+  &__content {
+    margin-top: 1.5rem;
+  }
+
+}
+
+
+// Medium devices (tablets, 768px and <)
+@include media-breakpoint-up(md) {
+  .new_page {
+
+    &__row {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 1.5rem;
+    }
+
+    &__content {
+      max-width: 100rem;
+    }
+    
+    &__date {
+      width: 15rem;
+      margin-left: 3rem;
+      flex-shrink: 1;
+      text-align: right;
+    }
+  }
+}

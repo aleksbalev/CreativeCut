@@ -1,0 +1,54 @@
+<?php return array (
+  'preserve_keys' => false,
+  'update_object' => true,
+  'unique_key' => 'name',
+  'related_objects' => 
+  array (
+    'PluginEvents' => 
+    array (
+      'b083abe802ae4fc056fd3c450fa1006c' => 
+      array (
+        'preserve_keys' => true,
+        'update_object' => false,
+        'unique_key' => 
+        array (
+          0 => 'pluginid',
+          1 => 'event',
+        ),
+        'class' => 'modPluginEvent',
+        'object' => '{"pluginid":14,"event":"OnMODXInit","priority":0,"propertyset":0}',
+        'guid' => '9ca75244cf51a4ca0756103a43fd52ed',
+        'native_key' => 
+        array (
+          0 => 14,
+          1 => 'OnMODXInit',
+        ),
+        'signature' => 'c1c04d20e7df8b06ccb11c5816c00942',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'PluginEvents' => 
+    array (
+      'preserve_keys' => true,
+      'update_object' => false,
+      'unique_key' => 
+      array (
+        0 => 'pluginid',
+        1 => 'event',
+      ),
+    ),
+  ),
+  'namespace' => 'langswitcher',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '861cc83a88776fd23de6b1596ddf8f44',
+  'package' => 'modx',
+  'class' => 'modPlugin',
+  'signature' => '1d7583c348eb74fcf7124ab9eb02ac8a',
+  'native_key' => 14,
+  'object' => '{"id":14,"source":1,"property_preprocess":0,"name":"switchLanguage","description":"","editor_type":0,"category":28,"cache_type":0,"plugincode":"if ($modx->event->name != \'OnMODXInit\' || $modx->context->key == \'mgr\' || !$modx->getOption(\'friendly_urls\')) {return;}\\n\\n$alias = $modx->getOption(\'request_param_alias\', null, \'alias\', true);\\n$request = &$_REQUEST[$alias];\\n\\n$q = $modx->newQuery(\'modContextSetting\', array(\'key\' => \'base_url\', \'value:!=\' => \'\'));\\n$q->select(\'context_key,value\');\\n\\n$contexts = array();\\n$tstart = microtime(true);\\nif ($q->prepare() && $q->stmt->execute()) {\\n\\n\\t$modx->queryTime += microtime(true) - $tstart;\\n\\t$modx->executedQueries++;\\n\\n\\twhile ($row = $q->stmt->fetch(PDO::FETCH_ASSOC)) {\\n\\t\\t$base_url = trim($row[\'value\'], \'\\/\');\\n\\t\\t$context = $row[\'context_key\'];\\n\\t\\n\\t\\tif (preg_match(\'\\/^(\'.$base_url.\')\\\\\\/\\/i\', $request)) {\\n\\t\\t\\tif ($context != \'web\') {\\n\\t\\t\\t\\t$modx->switchContext($context);\\n\\t\\t\\t}\\n\\t\\t\\t$request = preg_replace(\'\\/^\'.$base_url.\'\\\\\\/\\/\', \'\', $request);\\n\\t\\t\\tbreak;\\n\\t\\t}\\n\\t}\\n}\\n\\n$modx->lexicon->load(\'custom:default\');","locked":0,"properties":"a:0:{}","disabled":0,"moduleguid":"","static":0,"static_file":"","content":"if ($modx->event->name != \'OnMODXInit\' || $modx->context->key == \'mgr\' || !$modx->getOption(\'friendly_urls\')) {return;}\\n\\n$alias = $modx->getOption(\'request_param_alias\', null, \'alias\', true);\\n$request = &$_REQUEST[$alias];\\n\\n$q = $modx->newQuery(\'modContextSetting\', array(\'key\' => \'base_url\', \'value:!=\' => \'\'));\\n$q->select(\'context_key,value\');\\n\\n$contexts = array();\\n$tstart = microtime(true);\\nif ($q->prepare() && $q->stmt->execute()) {\\n\\n\\t$modx->queryTime += microtime(true) - $tstart;\\n\\t$modx->executedQueries++;\\n\\n\\twhile ($row = $q->stmt->fetch(PDO::FETCH_ASSOC)) {\\n\\t\\t$base_url = trim($row[\'value\'], \'\\/\');\\n\\t\\t$context = $row[\'context_key\'];\\n\\t\\n\\t\\tif (preg_match(\'\\/^(\'.$base_url.\')\\\\\\/\\/i\', $request)) {\\n\\t\\t\\tif ($context != \'web\') {\\n\\t\\t\\t\\t$modx->switchContext($context);\\n\\t\\t\\t}\\n\\t\\t\\t$request = preg_replace(\'\\/^\'.$base_url.\'\\\\\\/\\/\', \'\', $request);\\n\\t\\t\\tbreak;\\n\\t\\t}\\n\\t}\\n}\\n\\n$modx->lexicon->load(\'custom:default\');"}',
+);

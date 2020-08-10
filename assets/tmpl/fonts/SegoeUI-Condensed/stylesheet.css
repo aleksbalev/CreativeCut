@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'Segoe Condensed';
+    src: url('SegoeCondensed-Bold.eot');
+    src: url('SegoeCondensed-Bold.eot?#iefix') format('embedded-opentype'),
+        url('SegoeCondensed-Bold.woff2') format('woff2'),
+        url('SegoeCondensed-Bold.woff') format('woff'),
+        url('SegoeCondensed-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Segoe Condensed';
+    src: url('SegoeCondensed.eot');
+    src: url('SegoeCondensed.eot?#iefix') format('embedded-opentype'),
+        url('SegoeCondensed.woff2') format('woff2'),
+        url('SegoeCondensed.woff') format('woff'),
+        url('SegoeCondensed.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+

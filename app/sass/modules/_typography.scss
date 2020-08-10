@@ -1,0 +1,84 @@
+$df: 'Roboto', arial, sans-serif;
+
+@mixin font($fz, $ls:0,$color:$dark, $lh:1.2){
+  font-size: $fz;
+  letter-spacing: $ls;
+  color: $color;
+  line-height: $lh;
+}
+
+h1, .h1{
+  @include font($fz:2.5em, $color:inherit);
+  text-transform: uppercase;
+  margin-bottom: 0.2em;
+  margin-top: 1.6em;
+  font-weight: 700;
+}
+h2, .h2{
+  @include font($fz:1.2em,$color:inherit);
+  margin: 2em 0 0.6em;
+  font-weight: 400;
+}
+
+h1 + h2,
+.h1 + h2,
+h1 + .h2,
+.h1 + .h2 {
+  margin-top: 0;
+}
+
+p{
+  margin-top: 0;
+  margin-bottom: 1.5em;
+  
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
+
+a {
+  color: $black;
+  text-decoration: underline;
+  &:hover, &:focus {
+    color: $black;
+  }
+}
+
+strong{
+  letter-spacing: 0.04em;
+}
+
+.center {
+  text-align: center;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+blockquote {
+  font-size: 40px;
+  line-height: 1;
+
+  border-left: 4px solid $black;
+  padding-left: 2rem;
+}
+
+
+// Medium devices (tablets, < than 992px)
+@include media-breakpoint-down(md) {
+  blockquote {
+    font-size: 30px;
+  }
+}
+
+// Small devices (landscape phones, < than 768px)
+@include media-breakpoint-down(sm) {
+  h1, .h1 {
+    font-size: 3rem;
+  }
+}
